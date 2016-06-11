@@ -1,0 +1,25 @@
+<%= form_for(@user) do |f| %>
+  <fieldset>
+    <ul>
+      <li class="required">
+        <%= f.label :name %><br>
+        <%= f.text_field :name, size: 40 %><br>
+      </li>
+      <li class="required">
+        <%= f.label :email %><br>
+        <%= f.email_field :email, size: 40 %><br>
+      </li>
+      <li class="required">
+        <%= f.label :password %><br>
+        <%= f.password_field :password, size: 40 %><br>
+      </li>
+      <li class="required">
+        <%= f.label :password_confirmation, "Confirm Password" %><br>
+        <%= f.password_field :password_confirmation, size: 40 %><br>
+      </li>
+    </ul><br>
+
+      <%= f.submit %>
+
+  </fieldset>
+<% end %>
